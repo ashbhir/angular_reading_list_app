@@ -1,0 +1,50 @@
+<div class="new-form row">
+  <div class="col-md-4">
+    <form ng-submit="reviewFormCtrl.addBook()">
+      <div class="form-field row">
+        <div class="col-md-3"><label for="title">Title</label></div>
+        <div class="col-md-3"><input type="text" id="title" ng-model="book.title"/></div>
+      </div>
+      <div class="form-field row">
+        <div class="col-md-3"><label for="isbn">ISBN</label></div>
+        <div class="col-md-3"><input type="text" id="isbn" ng-model="book.isbn"/></div>
+      </div>
+      <div class="form-field row">
+        <div class="col-md-3"><label for="author">Author</label></div>
+        <div class="col-md-3"><input type="text" id="author" ng-model="book.author"/></div>
+      </div>
+      <div class="form-field row">
+        <div class="col-md-3"><label for="review">Review</label></div>
+        <div class="col-md-3"><textarea type="text" id="review" ng-model="book.review"></textarea></div>
+      </div>
+      <div class="form-field row">
+        <div class="col-md-3"><label for="rating">Rating</label></div>
+        <div class="col-md-3">
+          <select name="rating" id="rating">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select> 
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3"><label for="genre">Genres</label></div>
+        <div class="col-md-3">
+          <div ng-repeat="genre in rlctrl.genres">
+            <input type="checkbox" name="genre" value="{{genre}}" ng-model="book.genres[genre]"/>{{genre}}
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <input type="submit" value="Save"/>
+      </div>
+    </form> 
+  </div>
+
+  <div class="preview col-md-8">
+    <book></book>
+  </div>
+   
+</div>

@@ -1,0 +1,36 @@
+.reading-list{
+  margin-top: 20px;
+}
+
+.reading-list img{
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.book {
+  margin-top: 20px;
+}
+
+.book .row{
+  margin-left: 0;
+}
+
+.reading-list .book-cover {
+  padding: 0;
+  margin-right: 20px;
+}
+
+.book-desc h2{
+  margin-top: 0;
+}
+
+.new-form{
+  margin-top: 20px;
+}
+
+.new-form .form-field{
+  margin-top: 10px;
+}

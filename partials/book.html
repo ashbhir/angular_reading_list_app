@@ -1,0 +1,11 @@
+<div class="book row">
+  <div class="book-cover col-md-2">
+    <img ng-show="book.isbn" ng-src="http://images.amazon.com/images/P/{{book.isbn}}.01.ZTZZZZZZ.jpg" alt="book_cover"/>
+  </div>
+  <div class="book-desc col-md-2">
+    <div class="row" ng-show="book.title"><h2>{{book.title}}</h2></div>
+    <div class="row" ng-show="book.author"><p>Written By: {{book.author}}</p></div>
+    <div class="row" ng-show="book.review"><p>{{book.review}}</p></div>
+    <div class="row" ng-show="book.genres"><div ng-repeat="(genre, state) in book.genres" ng-show="state" class="btn btn-primary">{{genre}}</div></div>
+  </div>          
+</div>

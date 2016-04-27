@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Angular Reading List app</title>
+    <!-- STYLES -->
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  </head>
+  <body ng-app="readingList">
+
+    <div class="container" ng-controller="readingListCtrl as rlctrl">
+
+      <div class="header row">
+        <h1>Reading List</h1>
+      </div>
+
+      <div class="create-review row">
+        <input ng-click="reviewFormCtrl.showForm = !reviewFormCtrl.showForm" type="submit" value="{{reviewFormCtrl.showForm? 'Cancel': 'Add a book'}}">
+      </div>
+      
+      <review-form ng-show="reviewFormCtrl.showForm"></review-form>
+      
+
+      <div class="reading-list row">
+        <book ng-repeat="book in rlctrl.books"></book>
+      </div>
+        
+    </div>
+    
+
+    <!-- SCRIPTS -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components//jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
